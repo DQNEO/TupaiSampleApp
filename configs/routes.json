@@ -1,4 +1,4 @@
 {
-    "/Root": "helloworld.RootViewController",
+    "/root": "helloworld.RootViewController",
     "/list": "helloworld.ListViewController"
 }
