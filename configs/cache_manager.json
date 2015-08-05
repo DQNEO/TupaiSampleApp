@@ -1,0 +1,10 @@
+{
+  "issues":{
+    "config": {
+      "memCache":{
+        "limit":100,
+        "overflowRemoveSize":20
+      }
+    }
+  }
+}

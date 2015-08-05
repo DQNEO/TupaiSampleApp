@@ -9,7 +9,8 @@ Package()
       var app = new cp.Application({
         window: {
           routes: cp.Config['routes']
-        }
+        },
+        cacheManager: cp.Config['cache_manager'],
       });
       app.show('/root');
     });

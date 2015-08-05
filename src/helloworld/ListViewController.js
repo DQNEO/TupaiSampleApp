@@ -13,6 +13,9 @@ Package('helloworld')
             }
         });
         this.setContentView(view);
+
+      this.registerCacheObserver('issues', this);
+      this._cache = this.getCache('issues');
     },
     viewDidLoad: function (view) {
         cp.ViewController.prototype.viewDidLoad.apply(this, arguments);
