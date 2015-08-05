@@ -4,6 +4,7 @@ Package('helloworld')
 .use('helloworld.Templates')
 .define('RootViewController', function(cp) { return cp.ViewController.extend({
     viewInit: function(options, url) {
+        console.log('RootViewController.viewInit');
         cp.ViewController.prototype.viewInit.apply(this, arguments);
         var view = new cp.View({
             template: cp.Templates.get('helloworld.RootViewController.content'),
