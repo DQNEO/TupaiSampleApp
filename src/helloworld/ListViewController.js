@@ -8,7 +8,7 @@ Package('helloworld')
         var view = new cp.View({
             template: cp.Templates.get('helloworld.ListViewController.content'),
             templateParameters: {
-                lbl: 'Hello World!'
+                lbl: 'Hello ListView!'
             }
         });
         this.setContentView(view);
