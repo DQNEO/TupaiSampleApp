@@ -1,0 +1,9 @@
+{
+  "name" : "mytupaijsapp",
+  "version" : "0.0.1",
+  "description" : "",
+  "author" : "",
+  "dependencies" : {
+    "tupaijs": "*"
+  }
+}
