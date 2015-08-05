@@ -1,0 +1,15 @@
+{
+    "name": "helloworld",
+    "version": "0.0.1",
+    "package": "helloworld",
+    "server": {
+        "routers": {
+            "/src/*": "./src/{0}",
+            "/*.json": {
+                "path": "./testdatas/{0}.json",
+                "template": true
+            }
+        },
+        "port": 9800
+    }
+}
