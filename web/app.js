@@ -11,5 +11,5 @@ Package()
     apiManagers: cp.Config['api_managers'],
     apiManager: cp.Config['api_manager'],
   });
-  app.show('/root');
+  app.show('/root/list');
 });
