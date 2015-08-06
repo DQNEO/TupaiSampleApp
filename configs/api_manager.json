@@ -9,7 +9,7 @@
     "issues": {
       "search": {
         "method": "GET",
-        "url": "/api/issues"
+        "url": "/api/issues.js"
       }
     }
   }
