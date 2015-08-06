@@ -30,10 +30,10 @@ Package('helloworld')
     cellForRowAtIndexPath: function(indexPath, tableView){
         var index = indexPath.row;
         console.log(index);
-        var cell = tableView.dequeueReusableCell('issues_table_cell');
-        if (cell == null) {
-            cell = new cp.TimeLineTableViewCell();
-        }
+        //var cell = tableView.dequeueReusableCell('issues_table_cell');
+        //if (cell == null) {
+            var cell = new cp.TimeLineTableViewCell();
+    //}
         cell.setData(this._cache.get(index));
         return cell;
     },
