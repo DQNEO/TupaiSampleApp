@@ -1,0 +1,8 @@
+{
+    "client": {
+        "type": "default"
+    },
+    "responseDelegate": {
+        "classzz": "helloworld.ResponseDelegate"
+    }
+}
