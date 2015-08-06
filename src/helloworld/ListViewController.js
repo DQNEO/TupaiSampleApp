@@ -18,7 +18,7 @@ Package('helloworld')
       this._cache = this.getCache('issues');
     },
     viewDidLoad: function (view) {
-      console.log('ListView didLoad');
+        console.log('ListView didLoad');
         cp.ViewController.prototype.viewDidLoad.apply(this, arguments);
     },
 
