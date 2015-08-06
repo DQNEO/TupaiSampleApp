@@ -7,14 +7,9 @@ Package('helloworld')
 .define('ListViewController', function(cp) { return cp.ViewController.extend({
     viewInit: function(options, url) {
         console.log('ListViewController.viewInit');
-        cp.ViewController.prototype.viewInit.apply(this, arguments);
-        var view = new cp.View({
-            template: cp.Templates.get('helloworld.ListViewController.content'),
-            templateParameters: {
-              lbl: 'Hello ListView!'
-            }
-        });
-        this.setContentView(view);
+        var tableView = new cp.TableView();
+        tableView.setTableViewDelegate(this);
+        this.setContentView(tableView);
 
       this.registerCacheObserver('issues', this);
       this._cache = this.getCache('issues');
@@ -26,8 +21,22 @@ Package('helloworld')
             var issue = this._cache.get(i);
             console.log(issue);
         }
-    },
 
+        this.getContentView().reloadData();
+    },
+    numberOfRows : function() {
+        return this._cache.size();
+    },
+    cellForRowAtIndexPath: function(indexPath, tableView){
+        var index = indexPath.row;
+        console.log(index);
+        var cell = tableView.dequeueReusableCell('issues_table_cell');
+        if (cell == null) {
+            cell = new cp.TimeLineTableViewCell();
+        }
+        cell.setData(this._cache.get(index));
+        return cell;
+    },
     viewDidLoad: function (view) {
         console.log('ListView didLoad');
         this.executeApi({
