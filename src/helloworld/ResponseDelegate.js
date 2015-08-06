@@ -9,6 +9,12 @@ Package('helloworld')
               var cm = app.getCacheManager();
               var cache = cm.getCache('issues');
 
+              var issues = resJson.issues;
+              for(var i = 0;i<issues.length;i++) {
+                  cache.push(issues[i]);
+              }
+
+              cache.end();
           },
           didHttpRequestError: function(){},
       });

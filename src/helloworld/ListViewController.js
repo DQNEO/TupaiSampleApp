@@ -17,6 +17,15 @@ Package('helloworld')
       this.registerCacheObserver('issues', this);
       this._cache = this.getCache('issues');
     },
+    didCacheChanged: function(e){
+        console.log('did cached changed');
+        console.log(this._cache.size());
+        for(var i = 0;i< this._cache.size();i++) {
+            var issue = this._cache.get(i);
+            console.log(issue);
+        }
+    },
+
     viewDidLoad: function (view) {
         console.log('ListView didLoad');
         this.executeApi({
