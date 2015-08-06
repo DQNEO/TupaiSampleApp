@@ -1,7 +1,7 @@
 Package('helloworld.ui')
-      .use('tupai.ui.View')
-      .use('helloworld.Templates')
-      .define('TimeLineTableViewCell', function(cp){ return cp.View.extend({
+.use('tupai.ui.View')
+.use('helloworld.Templates')
+.define('TimeLineTableViewCell', function(cp){ return cp.View.extend({
     setData: function(data) {
         this._data = data;
     },
@@ -11,7 +11,5 @@ Package('helloworld.ui')
     getTemplateParameters: function() {
         return this._data;
     }
-
-
-      })});
+})});
 
