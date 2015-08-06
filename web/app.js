@@ -11,6 +11,8 @@ Package()
       routes: cp.Config['routes']
     },
     cacheManager: cp.Config['cache_manager'],
+    apiManagers: cp.Config['api_managers'],
+    apiManager: cp.Config['api_manager'],
   });
   app.show('/root');
 });
