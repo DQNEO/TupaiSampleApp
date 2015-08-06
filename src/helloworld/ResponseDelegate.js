@@ -4,7 +4,11 @@ Package('helloworld')
           didHttpRequestSuccess: function(name, requestName, response,request){
               console.log('did request success');
               var resJson = JSON.parse(response.responseText);
-              console.log(resJson);
+
+              var app = cp.Application.instance;
+              var cm = app.getCacheManager();
+              var cache = cm.getCache('issues');
+
           },
           didHttpRequestError: function(){},
       });
