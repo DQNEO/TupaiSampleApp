@@ -3,6 +3,7 @@ Package('helloworld')
 .use('tupai.ui.View')
 .use('tupai.ui.TableView')
 .use('helloworld.Templates')
+.use('helloworld.ui.TimeLineTableViewCell')
 .define('ListViewController', function(cp) { return cp.ViewController.extend({
     viewInit: function(options, url) {
         console.log('ListViewController.viewInit');
