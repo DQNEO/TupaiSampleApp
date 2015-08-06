@@ -21,9 +21,7 @@ Package('helloworld')
       console.log('ListView didLoad');
         cp.ViewController.prototype.viewDidLoad.apply(this, arguments);
     },
-    viewDidUnload: function (view) {
-        cp.ViewController.prototype.viewDidUnload.apply(this, arguments);
-    },
+
     /* call from transisManager */
     transitController: function (controller, url, options, transitOptions) {
     }
