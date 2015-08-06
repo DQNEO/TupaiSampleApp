@@ -1,6 +1,7 @@
 Package('helloworld')
 .use('tupai.ViewController')
 .use('tupai.ui.View')
+.use('tupai.ui.TableView')
 .use('helloworld.Templates')
 .define('ListViewController', function(cp) { return cp.ViewController.extend({
     viewInit: function(options, url) {
