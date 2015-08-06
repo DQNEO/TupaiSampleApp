@@ -4,5 +4,13 @@
     },
     "responseDelegate": {
         "classzz": "helloworld.ResponseDelegate"
+    },
+  "apiParameterMap":{
+    "issues": {
+      "search": {
+        "method": "GET",
+        "url": "/api/issues"
+      }
     }
+  }
 }

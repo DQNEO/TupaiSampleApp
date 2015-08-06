@@ -19,7 +19,11 @@ Package('helloworld')
     },
     viewDidLoad: function (view) {
         console.log('ListView didLoad');
-        cp.ViewController.prototype.viewDidLoad.apply(this, arguments);
+        this.executeApi({
+            name:"issues",
+            requestName: "search",
+            parameters: {foo:"bar"}
+        });
     },
 
     /* call from transisManager */
