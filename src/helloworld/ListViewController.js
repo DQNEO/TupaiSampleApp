@@ -11,8 +11,8 @@ Package('helloworld')
         tableView.setTableViewDelegate(this);
         this.setContentView(tableView);
 
-      this.registerCacheObserver('issues', this);
-      this._cache = this.getCache('issues');
+        this.registerCacheObserver('issues', this);
+        this._cache = this.getCache('issues');
     },
     didCacheChanged: function(e){
         console.log('did cached changed');
@@ -32,11 +32,11 @@ Package('helloworld')
         console.log(index);
         //var cell = tableView.dequeueReusableCell('issues_table_cell');
         //if (cell == null) {
-            var cellView = new cp.TimeLineTableViewCell();
-    //}
-      var data = this._cache.get(index);
+        var cellView = new cp.TimeLineTableViewCell();
+        //}
+        var data = this._cache.get(index);
         data.urlShow = "#!/issues?id=" + data.id;
-      cellView.setData(data);
+        cellView.setData(data);
         return cellView;
     },
     viewDidLoad: function (view) {
