@@ -36,6 +36,8 @@ Package('helloworld')
         //}
         var data = this._cache.get(index);
         data.urlShow = "#!/issues?id=" + data.id;
+        data.urlEdit = "#!/issues/edit?id=" + data.id;
+
         cellView.setData(data);
         return cellView;
     },
