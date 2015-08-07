@@ -4,8 +4,11 @@ Package('helloworld.ui')
 .define('TimeLineTableViewCell', function(cp){ return cp.View.extend({
   didRender : function(){
     console.log('didRender');
-    this.findViewById('foo').bind('click', function(e){
+    this.findViewById('linkShow').bind('click', function(e){
         alert('clicked');
+    });
+    this.findViewById('linkShow2').bind('click', function(e){
+        alert('clicked 2');
     });
   },
     setData: function(data) {
