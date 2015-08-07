@@ -35,8 +35,8 @@ Package('helloworld')
         var cellView = new cp.TimeLineTableViewCell();
         //}
         var data = this._cache.get(index);
-        data.urlShow = "#!/issues?id=" + data.id;
-        data.urlEdit = "#!/issues/edit?id=" + data.id;
+        data.urlShow = "#!/issue/show?id=" + data.id;
+        data.urlEdit = "#!/issue/edit?id=" + data.id;
 
         cellView.setData(data);
         return cellView;
