@@ -32,10 +32,12 @@ Package('helloworld')
         console.log(index);
         //var cell = tableView.dequeueReusableCell('issues_table_cell');
         //if (cell == null) {
-            var cell = new cp.TimeLineTableViewCell();
+            var cellView = new cp.TimeLineTableViewCell();
     //}
-        cell.setData(this._cache.get(index));
-        return cell;
+      var data = this._cache.get(index);
+      data.foo = "#!/issues?id=" + data.id;
+      cellView.setData(data);
+        return cellView;
     },
     viewDidLoad: function (view) {
         console.log('ListView didLoad');
