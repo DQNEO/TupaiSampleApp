@@ -35,7 +35,7 @@ Package('helloworld')
             var cellView = new cp.TimeLineTableViewCell();
     //}
       var data = this._cache.get(index);
-      data.foo = "#!/issues?id=" + data.id;
+        data.urlShow = "#!/issues?id=" + data.id;
       cellView.setData(data);
         return cellView;
     },
